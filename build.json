@@ -1,0 +1,46 @@
+{
+  "appId": "",
+  "id": "",
+  "appUUID": "",
+  "name": "OnesAnyForm",
+  "lockFlag": "n",
+  "officialFlag": "n",
+  "systemFlag": "n",
+  "debugFlag": "n",
+  "codes": {
+    "Config.js": {
+      "state": "n"
+    },
+    "config/config_default.js": {
+      "state": "y"
+    },
+    "config/config.js": {
+      "state": "y"
+    },
+    "config/configLoad_default.js": {
+      "state": "n"
+    },
+    "config/configLoad.js": {
+      "state": "n"
+    },
+    "Design.js": {
+      "state": "n"
+    },
+    "entry.js": {
+      "state": "y"
+    },
+    "MDesign.js": {
+      "state": "n"
+    },
+    "MView.js": {
+      "state": "n"
+    },
+    "StyleConfig.js": {
+      "state": "n"
+    },
+    "View.js": {
+      "state": "n"
+    }
+  },
+  "resources": {}
+}

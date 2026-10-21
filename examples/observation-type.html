@@ -1,0 +1,59 @@
+<div class="wrapper">
+<div class="container">
+<div class="column">
+<div class="header">Safe / Positive</div>
+<div class="card safe" data-value="0">
+<div class="main-icon-bg"><svg viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg></div>
+<div class="card-content"><h2>Positive</h2><h3>إيجابية</h3><p>Safe Act / Safe Condition</p></div>
+<div class="status-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+</div>
+</div>
+<div class="column">
+<div class="header">Unsafe / Negative</div>
+<div class="card unsafe" data-value="1">
+<div class="main-icon-bg"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg></div>
+<div class="card-content"><h2>Negative</h2><h3>سلبية</h3><p>Unsafe Act / Unsafe Condition</p></div>
+<div class="status-icon unselected"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+</div>
+</div>
+</div>
+<div class="footer-container">
+<div class="footer-text">Mandatory · one choice only · controls which options show in section 3</div>
+<div class="footer-text right">إلزامي · اختيار واحد فقط</div>
+</div>
+</div>
+<style>
+:host{--header-bg:#a0c0e0;--safe-bg:#f2f9f0;--safe-border:#2e7d32;--safe-text:#2e7d32;--unsafe-text:#c62828;--gray-text:#666;--gray-border:#d1d5db}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.ufc-root{padding:20px;background-color:#fff;display:flex;justify-content:center}
+.wrapper{max-width:1000px;width:100%}
+.container{display:flex;gap:20px}
+.column{flex:1;display:flex;flex-direction:column}
+.header{background-color:var(--header-bg);color:#fff;text-align:center;font-weight:bold;padding:10px;border-radius:4px 4px 0 0;font-size:16px}
+.card{display:flex;align-items:center;padding:20px;border-radius:8px;margin-top:10px;position:relative;flex:1}
+.card.safe{background-color:var(--safe-bg);border:2px solid var(--safe-border)}
+.card.safe h2,.card.safe h3{color:var(--safe-text)}
+.card.safe .main-icon-bg{background-color:#2e7d32}
+.card.safe .status-icon:not(.unselected){background-color:#2e7d32}
+.card.unsafe{background-color:#fff;border:2px solid var(--gray-border)}
+.card.unsafe h2,.card.unsafe h3{color:var(--unsafe-text)}
+.card.unsafe .main-icon-bg{background-color:#c62828}
+.card.unsafe .status-icon:not(.unselected){background-color:#c62828}
+.main-icon-bg{width:64px;height:64px;border-radius:50%;display:flex;justify-content:center;align-items:center;margin-right:16px;flex-shrink:0}
+.main-icon-bg svg{width:32px;height:32px;fill:#fff}
+.card-content{flex-grow:1}
+.card-content h2{font-size:22px;margin:0 0 2px 0}
+.card-content h3{font-size:18px;margin:0 0 4px 0;font-weight:700}
+.card-content p{font-size:13px;color:var(--gray-text);margin:0}
+.status-icon{width:28px;height:28px;border-radius:50%;display:flex;justify-content:center;align-items:center;margin-left:10px;flex-shrink:0}
+.status-icon svg{width:16px;height:16px;fill:#fff}
+.status-icon.unselected{background-color:transparent;border:2px solid #9ca3af}
+.status-icon.unselected svg{display:none}
+.footer-container{display:flex;justify-content:space-between;margin-top:8px;padding:0 4px}
+.footer-text{font-size:12px;color:var(--gray-text)}
+.footer-text.right{text-align:right;direction:rtl}
+@media (max-width:768px){.container{flex-direction:column;gap:16px}.footer-container{flex-direction:column;gap:8px;margin-top:16px;padding:0 8px}.footer-text.right{text-align:left}}
+</style>
+<script>
+(function(){'use strict';var F='obstyp',R=ctx.root;function g(){try{var v=ctx.get(F);return v===undefined||v===null?'':String(v)}catch(e){return ''}}function p(){var v=g(),a=R.querySelectorAll('[data-value]');for(var i=0;i<a.length;i++){var c=a[i],s=c.querySelector('.status-icon');if(s)s.className='status-icon'+(String(c.getAttribute('data-value'))===v?'':' unselected')}}function k(e){var a={};try{a=ctx.attr(F)||{}}catch(x){}if(a.hidden||a.readOnly||ctx.mode==='readonly'||ctx.mode==='print')return;try{ctx.set(F,e.currentTarget.getAttribute('data-value'))}catch(x){}p()}var l=R.querySelectorAll('[data-value]');for(var i=0;i<l.length;i++)l[i].addEventListener('click',k);ctx.on(F,p);ctx.onAttr(F,p);ctx.onReady(p);p()})();
+</script>
